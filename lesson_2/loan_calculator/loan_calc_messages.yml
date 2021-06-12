@@ -1,0 +1,24 @@
+en:
+  welcome: 'Hello! Welcome to the mortgage/car payment calculator.'
+  loan_amt: 'What is the loan amount?'
+  negative: "This isn't a positive number. Please try again."
+  apr: 'What is the APR?'
+  invalid: 'This is not a valid number. Please try again.'
+  loan_length: 'What is the length of the loan in years?'
+  calculating: 'Calculating your loan payment now...'
+  payment: 'Your monthly payment is: %{amt}'
+  again: 'Would you like to do another calculation? Y for yes.'
+  goodbye: 'Thank you for using the calculator! See you!'
+  
+es:
+  welcome: '¡Hola! Bienvenido a la calculadora de pagos de hipotecas/coches.'
+  loan_amt: "¿Cuál es el importe del préstamo?"
+  negative: 'Este no es un número positivo. Por favor, inténtalo de nuevo.'
+  apr: "¿Qué es la TAE?"
+  invalid: 'Este número no es válido. Por favor, inténtelo de nuevo.'
+  loan_length: '¿Cuál es la duración del préstamo en años?'
+  calculating: 'Calcular el pago de su préstamo ahora...'
+  payment: 'Su pago mensual es: %{amt}'
+  again: '¿Quiere hacer otro cálculo? Y de "sí".'
+  goodbye: '¡Gracias por usar la calculadora! Nos vemos.'
+
