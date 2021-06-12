@@ -31,7 +31,7 @@ end
 def calculate_payment(amount, monthly_rate, length_months)
   amount.to_i * (monthly_rate / (1 - (1 + monthly_rate)**(-length_months)))
 end
-  
+
 system('clear')
 
 prompt('welcome')
@@ -78,10 +78,10 @@ loop do
   length_months = length.to_f * 12
 
   monthly_payment = calculate_payment(amount, monthly_rate, length_months)
-  
+
   prompt('calculating')
   sleep(2)
-  
+
   puts format(messages('payment', LANGUAGE), amt: "$#{monthly_payment.round(2)}")
 
   prompt('again')
