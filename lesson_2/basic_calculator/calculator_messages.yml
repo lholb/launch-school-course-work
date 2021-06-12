@@ -1,0 +1,12 @@
+welcome: 'Welcome to the calculator. Enter your name:'
+valid_name: 'Make sure to use a valid name.'
+greeting: "Hello #{name}!"
+first_number: 'What is the first number?'
+invalid_number: "Hmm... That doesn't look like a valid number."
+second_number: 'What is the second number?'
+invalid_operator: 'Must choose 1, 2, 3 or 4'
+calculating: "#{operation_to_message(operator)} the two numbers..."
+result: "The result is #{result}"
+again: 'Do you want to perform another calculation? (Y to calculate again)'
+goodbye: 'Thank you for using the calculator! :)'
+  
