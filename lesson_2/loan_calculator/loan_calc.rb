@@ -26,14 +26,14 @@ end
 
 def get_loan_amt
   prompt('loan_amt')
-  
+
   amount = ''
   loop do
     amount = gets.chomp.gsub('$', '').gsub(',', '').gsub('k', '000')
     break if valid_integer?(amount) || valid_float?(amount)
     prompt('negative')
   end
-  
+
   amount
 end
 
@@ -46,7 +46,7 @@ def get_loan_rate
     break if valid_apr?(rate)
     prompt('invalid')
   end
-  
+
   rate
 end
 
@@ -59,12 +59,12 @@ def get_loan_length
     break if valid_integer?(length) || valid_float?(length)
     prompt('negative')
   end
-  
+
   length
 end
-  
+
 def calculate_payment(amount, monthly_rate, length_months)
-  if monthly_rate > 0 
+  if monthly_rate > 0
     amount.to_i * (monthly_rate / (1 - (1 + monthly_rate)**(-length_months)))
   elsif monthly_rate == 0
     amount.to_i / length_months
@@ -72,13 +72,13 @@ def calculate_payment(amount, monthly_rate, length_months)
 end
 
 def display_payment(payment)
-   puts format(messages('payment', LANGUAGE), 
+  puts format(messages('payment', LANGUAGE),
               amt: "$#{payment.round(2)}")
 end
 
 def calculate_again?
   prompt('again')
-  
+
   loop do
     again = gets.chomp
     if ['y', 'yes'].include?(again.downcase)
@@ -101,21 +101,20 @@ prompt('welcome')
 loop do
   amount = get_loan_amt
   rate = get_loan_rate
-  length = get_loan_length 
-  
+  length = get_loan_length
+
   annual_rate = rate.to_f / 100
   monthly_rate = annual_rate / 12
   length_months = length.to_f * 12
-  
+
   monthly_payment = calculate_payment(amount, monthly_rate, length_months)
-  
+
   prompt('calculating')
   sleep(2)
-  
+
   display_payment(monthly_payment)
-  
+
   break if !(calculate_again?)
-  
 end
 
 clear
