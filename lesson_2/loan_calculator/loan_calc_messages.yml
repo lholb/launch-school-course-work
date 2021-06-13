@@ -8,8 +8,9 @@ en:
   calculating: 'Calculating your loan payment now...'
   payment: 'Your monthly payment is: %{amt}'
   again: 'Would you like to do another calculation? Y for yes.'
+  invalid_input: "That doesn't look like valid input. Please put either y/n or yes/no."
   goodbye: 'Thank you for using the calculator! See you!'
-  
+
 es:
   welcome: '¡Hola! Bienvenido a la calculadora de pagos de hipotecas/coches.'
   loan_amt: "¿Cuál es el importe del préstamo?"
@@ -20,5 +21,6 @@ es:
   calculating: 'Calcular el pago de su préstamo ahora...'
   payment: 'Su pago mensual es: %{amt}'
   again: '¿Quiere hacer otro cálculo? Y de "sí".'
+  invalid_input: "Eso no parece una entrada válida. Por favor, ponga y/n o sí/no."
   goodbye: '¡Gracias por usar la calculadora! Nos vemos.'
 
